@@ -5,20 +5,24 @@ int main()
     // Carta 1
     char estado1;
     char codigo1[4];
-    char nome1[50];
-    unsigned long int populacao1;
-    float area1, pib1;
-    int pontos1;
-    float densidade1, pib_per_capita1, super_poder1;
+    char nomeCidade1[100];
+    int populacao1;
+    float area1;
+    float pib1;
+    int pontosTuristicos1;
+    float densidade1;
+    float pib_per_capita1;
 
-    // Carta 2
+    // Dados da Carta 2
     char estado2;
     char codigo2[4];
-    char nome2[50];
-    unsigned long int populacao2;
-    float area2, pib2;
-    int pontos2;
-    float densidade2, pib_per_capita2, super_poder2;
+    char nomeCidade2[100];
+    int populacao2;
+    float area2;
+    float pib2;
+    int pontosTuristicos2;
+    float densidade2;
+    float pib_per_capita2;
 
     // Entrada da Carta 1
     printf("Cadastro da Carta 1:\n");
@@ -27,7 +31,7 @@ int main()
     printf("Código da Carta (ex: A01): ");
     scanf("%s", codigo1);
     printf("Nome da Cidade: ");
-    scanf(" %[^\n]", nome1);
+    scanf(" %[^\n]", nomeCidade1);
     printf("População: ");
     scanf("%lu", &populacao1);
     printf("Área (em km²): ");
@@ -35,7 +39,7 @@ int main()
     printf("PIB (em bilhões de reais): ");
     scanf("%f", &pib1);
     printf("Número de Pontos Turísticos: ");
-    scanf("%d", &pontos1);
+    scanf("%d", &pontosTuristicos1);
 
     // Cálculos da Carta 1
     densidade1 = populacao1 / area1;
@@ -48,7 +52,7 @@ int main()
     printf("Código da Carta (ex: B02): ");
     scanf("%s", codigo2);
     printf("Nome da Cidade: ");
-    scanf(" %[^\n]", nome2);
+    scanf(" %[^\n]", nomeCidade2);
     printf("População: ");
     scanf("%lu", &populacao2);
     printf("Área (em km²): ");
@@ -56,7 +60,7 @@ int main()
     printf("PIB (em bilhões de reais): ");
     scanf("%f", &pib2);
     printf("Número de Pontos Turísticos: ");
-    scanf("%d", &pontos2);
+    scanf("%d", &pontosTuristicos2);
 
     // Cálculos da Carta 2
     densidade2 = populacao2 / area2;
@@ -79,16 +83,16 @@ int main()
 
     // Comparação e determinação do vencedor
     printf("\nComparação de cartas (Atributo: %s):\n", atributo_nome);
-    printf("\nCarta 1 - %s (%c): %lu\n", nome1, estado1, atributo1);
-    printf("Carta 2 - %s (%c): %lu\n", nome2, estado2, atributo2);
+    printf("\nCarta 1 - %s (%c): %lu\n", nomeCidade1, estado1, atributo1);
+    printf("Carta 2 - %s (%c): %lu\n", nomeCidade2, estado2, atributo2);
 
     if (atributo1 > atributo2)
     {
-        printf("\nResultado: Carta 1 (%s) venceu!\n", nome1);
+        printf("\nResultado: Carta 1 (%s) venceu!\n", nomeCidade1);
     }
     else if (atributo1 < atributo2)
     {
-        printf("\nResultado: Carta 2 (%s) venceu!\n", nome2);
+        printf("\nResultado: Carta 2 (%s) venceu!\n", nomeCidade2);
     }
     else
     {
